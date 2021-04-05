@@ -1,17 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+    <ion-title align="center">
+      Investment Calculator
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div [formGroup]="firstFormGroup" fxLayout="column" style="height: 100%;padding: 12px;">
+    <div fxLayout="column">
+      <div style="padding: 10px;">
+        Invest amount
+      </div>
+      <div>
+        <input type="number"  formControlName="Principal" required
+          style="height: 60px; width: 100%; background-color: transparent;border-radius:5px; border:.5px solid #F2AA4CFF;padding-left: 10px;"
+          placeholder="Enter amount you invest">
+      </div>
+      <div style="padding: 10px;">
+        Interest (Percentage) / annual
+      </div>
+      <div>
+        <input type="number" formControlName="Interest" required
+          style="height: 60px; width: 100%; background-color: transparent;border-radius:5px;border:.5px solid #F2AA4CFF; padding-left: 10px;"
+          placeholder="Enter annual rate you got">
+      </div>
+    </div>
+    <div fxLayout="row" style="height: 60px; padding: 10px; border-bottom: 1px solid gray;" (click)="showPicker()">
+      <div style="padding: 10px;">Loan tenure</div>
+      <div style="margin-left:auto ; color: gray; padding: 10px;">{{year}} year {{months}} months > </div>
+    </div>
+    <div style="margin: auto; text-align: center;" *ngIf="showResult">
+      <div style="font-weight: 200; font-size: xx-large; color: greenyellow;">
+        Total payment
+      </div><br>
+      <div style="font-weight: 200; font-size: xxx-large; color: #F2AA4CFF;">
+        ₹ {{exactAmount}}
+      </div>
+    </div>
+
+
+
+
+    <ion-button (click) = "calculate()"  style="margin-top: auto; --border-radius: 24px; height: 50px;">Calculate</ion-button>
+
+  </div>
 </ion-content>

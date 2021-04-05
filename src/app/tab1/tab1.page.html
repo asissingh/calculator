@@ -1,17 +1,48 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div fxLayout="column" style="height: 100%; background-color: black;" >
+<div fxFlex  fxLayout="column" style="padding-left: 15px;padding-right: 15px;overflow: auto;" >
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<div class="result">{{input}}</div>
+<div fxLayout="row"  *ngIf="find">
+  <div style="font-size:xxx-large; color: gray; margin-top:auto;">=</div>
+  <div class="resultOne">{{FinalOutPut}}</div>
+  </div>
+</div>
+<div fxLayout="column" style="padding: 12px;">
+  <div fxLayout="row" >
+    <button class="buttons" (click)="clearAll()">AC</button>
+    <button class="buttons" (click)="closeOne()"><ion-icon name="backspace-outline"></ion-icon></button>
+    <button class="buttons"  (click)="operators('%')">%</button>
+    <button class="buttons"  (click)="operators('÷')"><ion-icon src="assets/icon/divide.svg"></ion-icon></button>
+  </div>
+  <div fxLayout="row">
+    <button class="buttonTwo" (click)="num(1)">1</button>
+    <button class="buttonTwo" (click)="num(2)">2</button>
+    <button class="buttonTwo" (click)="num(3)">3</button>
+    <button class="buttonPwo" (click)="operators('×')">✕</button>
+  </div>
+  <div fxLayout="row">
+    <button class="buttonTwo"  (click)="num(4)">4</button>
+    <button class="buttonTwo"  (click)="num(5)">5</button>
+    <button class="buttonTwo"  (click)="num(6)">6</button>
+    <button class="buttonPwo"  (click)="operators('-')"><ion-icon name="remove-outline"></ion-icon></button>
+  </div>
+  <div fxLayout="row">
+    <button class="buttonTwo"  (click)="num(7)">7</button>
+    <button class="buttonTwo"  (click)="num(8)">8</button>
+    <button class="buttonTwo"  (click)="num(9)">9</button>
+    <button class="buttonPwo"  (click)="operators('+')"><ion-icon name="add-outline"></ion-icon></button>
+  </div>
+  <div fxLayout="row">
+    <button class="buttonTwo" (click)="operators('^')">x<sup>y</sup></button>
+    <button class="buttonTwo"  (click)="num(0)">0</button>
+    <button class="buttonTwo"  (click)="num('.')">.</button>
+    <button class="buttonPwo"  style="font-size: xxx-large;" (click)="FinalAll()"><div fxLayoutAlign="center center" style=" height: 60px;border-radius: 100px; width: 60px; margin-left: 10px; background-color: #F2AA4CFF; color: black;" >=</div></button>
+  </div>
+
+</div>
+</div>
+
 </ion-content>
