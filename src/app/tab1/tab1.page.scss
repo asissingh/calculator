@@ -1,50 +1,57 @@
-.buttons{
+.buttons {
   width: -webkit-fill-available;
   height: 60px;
   color: #F2AA4CFF;
   background: black;
   font-size: x-large;
+  font-weight: 300;
   outline: none;
-  border-radius:50% ;
+  border-radius: 50%;
 
 }
-.buttonTwo{
+
+.buttonTwo {
   width: -webkit-fill-available;
   height: 60px;
   color: #f0f0f0;
   background: black;
   font-size: x-large;
+  font-weight: 300;
   outline: none;
 
 }
 
-.buttonPwo{
+.buttonPwo {
   width: -webkit-fill-available;
   height: 60px;
   color: #F2AA4CFF;
   background: black;
   font-size: x-large;
+  font-weight: 300;
   outline: none;
 
 }
+
 .ripple-parent {
   position: relative;
   overflow: hidden;
 }
-.result{
-width: 100%;
-text-align: right;
-font-size: xxx-large;
-color: ghostwhite;
-margin-top: auto;
-border-bottom: .5px solid rgb(179, 179, 179);
-overflow: auto;
+
+.result {
+  width: 100%;
+  text-align: right;
+  font-size: xxx-large;
+  color: ghostwhite;
+  margin-top: auto;
+  border-bottom: .5px solid rgb(179, 179, 179);
+  overflow: auto;
 }
-.resultOne{
+
+.resultOne {
   width: 100%;
   text-align: right;
   font-size: 60px;
   color: rgb(189, 189, 189);
   padding-right: 15px;
 
-  }
+}
