@@ -18,26 +18,26 @@
     <button class="buttons"  (click)="operators('÷')"><ion-icon src="assets/icon/divide.svg"></ion-icon></button>
   </div>
   <div fxLayout="row">
-    <button class="buttonTwo" (click)="num(1)">1</button>
-    <button class="buttonTwo" (click)="num(2)">2</button>
-    <button class="buttonTwo" (click)="num(3)">3</button>
+    <button class="buttonTwo" (click)="num('1')">1</button>
+    <button class="buttonTwo" (click)="num('2')">2</button>
+    <button class="buttonTwo" (click)="num('3')">3</button>
     <button class="buttonPwo" (click)="operators('×')">✕</button>
   </div>
   <div fxLayout="row">
-    <button class="buttonTwo"  (click)="num(4)">4</button>
-    <button class="buttonTwo"  (click)="num(5)">5</button>
-    <button class="buttonTwo"  (click)="num(6)">6</button>
+    <button class="buttonTwo"  (click)="num('4')">4</button>
+    <button class="buttonTwo"  (click)="num('5')">5</button>
+    <button class="buttonTwo"  (click)="num('6')">6</button>
     <button class="buttonPwo"  (click)="operators('-')"><ion-icon name="remove-outline"></ion-icon></button>
   </div>
   <div fxLayout="row">
-    <button class="buttonTwo"  (click)="num(7)">7</button>
-    <button class="buttonTwo"  (click)="num(8)">8</button>
-    <button class="buttonTwo"  (click)="num(9)">9</button>
+    <button class="buttonTwo"  (click)="num('7')">7</button>
+    <button class="buttonTwo"  (click)="num('8')">8</button>
+    <button class="buttonTwo"  (click)="num('9')">9</button>
     <button class="buttonPwo"  (click)="operators('+')"><ion-icon name="add-outline"></ion-icon></button>
   </div>
   <div fxLayout="row">
     <button class="buttonTwo" (click)="operators('^')">x<sup>y</sup></button>
-    <button class="buttonTwo"  (click)="num(0)">0</button>
+    <button class="buttonTwo"  (click)="num('0')">0</button>
     <button class="buttonTwo"  (click)="num('.')">.</button>
     <button class="buttonPwo"  style="font-size: xxx-large;" (click)="clearAnd()"><div fxLayoutAlign="center center" style=" height: 60px;border-radius: 100px; width: 60px; margin-left: 10px; background-color: #F2AA4CFF; color: black;" >=</div></button>
   </div>
