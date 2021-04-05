@@ -39,7 +39,11 @@ export class Tab1Page {
     }
     this.FinalOutPut = eval(b);
   }
+clearAnd(){
+  this.FinalAll();
+  this.find = true;
 
+}
   operators(n) {
     let b = '';
     let last = this.input[this.input.length - 1];
@@ -68,6 +72,6 @@ export class Tab1Page {
       this.input += n;
       ``;
     }
-    this.find = true;
+
   }
 }
